@@ -1,4 +1,5 @@
 import Header from '../components/Header'
+import Layout from '../components/Layout'
 import './css/globals.css'
 import { Metadata } from 'next'
 
@@ -16,8 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='font-bodyFont w-full bg-main-bg text-darkText'>
-        <Header />
-        {children}
+        <Layout>
+          <Header />
+          {children}
+        </Layout>
       </body>
     </html>
   )
